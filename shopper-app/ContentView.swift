@@ -8,11 +8,61 @@
 import SwiftUI
 import MapKit
 
+
+
 struct ContentView: View {
+    @State private var sideMenuButton: Bool = false
+    
+    let backgroundGradient = LinearGradient(
+        colors: [Color.red, Color.blue],
+        startPoint: .top, endPoint: .bottom)
+    
     var body: some View {
-        Map().mapStyle(.standard(elevation: .realistic, showsTraffic: false))
+        
+        GeometryReader { geometry in
+            ZStack {
+                Map().mapStyle(.standard(elevation: .realistic))
+                
+                let sideMenuSize = 2*geometry.size.width / 3
+                
+                Button(action: {                                    withAnimation {
+                    sideMenuButton.toggle()
+                }
+                }) {
+                    Image(systemName: "list.dash")
+                }
+                .font(.title)
+                .padding(.leading, 2.0)
+                .accentColor(.black)
+                .position(x: sideMenuButton ? sideMenuSize + 50 : 50, y: 45)
+                if sideMenuButton {
+                    Color.black.opacity(0.5)
+                        .ignoresSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation {
+                                sideMenuButton.toggle()
+                            }
+                        }
+                    backgroundGradient
+                        .ignoresSafeArea(.all)
+                        .frame(width: sideMenuSize)
+
+                    sideMenu(followings: followingsTestData)
+                        .frame(width: sideMenuSize, height: .infinity)
+                        .shadow(radius: 5)
+                        .transition(.slide)
+                        
+                }
+                
+            }
+        }
+        
     }
-}
+        
+        
+        
+    }
+
 
 #Preview {
     ContentView()
