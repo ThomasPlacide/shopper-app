@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+// import MapKit
 
 struct SearchBar: UIViewRepresentable {
     @Binding var text: String
