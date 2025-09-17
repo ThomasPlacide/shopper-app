@@ -8,57 +8,53 @@
 import Foundation
 import SwiftUI
 
-struct SearchBar: UIViewRepresentable {
+struct SearchBar: View {
     @Binding var text: String
-
-    class Coordinator: NSObject, UISearchBarDelegate {
-        @Binding var text: String
-
-        init(text: Binding<String>) {
-            _text = text
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+            TextField("Search", text: $text)
+                .textFieldStyle(.plain)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+            if !text.isEmpty {
+                Button {
+                    text = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.tertiary)
+                }
+                .buttonStyle(.plain)
+            }
         }
-
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
-        }
-    }
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(text: $text)
-    }
-
-    func makeUIView(context: Context) -> UISearchBar {
-        let searchBar = UISearchBar(frame: .zero)
-        searchBar.delegate = context.coordinator
-        return searchBar
-    }
-
-    func updateUIView(_ uiView: UISearchBar, context: Context) {
-        uiView.text = text
+        .padding(8)
+        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10))
+        .padding(.horizontal)
     }
 }
 
 struct sideMenu: View {
     var followings: [Following]
-        @State private var searchText = ""
-        
-        var filteredFollowings: [Following] {
-            if searchText.isEmpty {
-                return followings
-            } else {
-                return followings.filter { $0.name.contains(searchText) }
-            }
-        }
-    
+    @State private var searchText = ""
 
-    var body: some View {
-            VStack {
-                SearchBar(text: $searchText)
-                List(followings) { following in
-                    Text(following.name)
-                }
-                Spacer()
-            }
-
+    var filteredFollowings: [Following] {
+        if searchText.isEmpty {
+            return followings
+        } else {
+            return followings.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
     }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            SearchBar(text: $searchText)
+                .padding(.vertical, 8)
+            List(filteredFollowings) { following in
+                Text(following.name)
+            }
+        }
+        .navigationTitle("Followings")
+    }
+}
