@@ -29,20 +29,47 @@
 		E95891B02D0B9B9F00111B91 /* shopper-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shopper-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E90226552E7F1F85007114A5 /* Exceptions for "tests" folder in "shopper-app" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"shopper-appTests/shopper_appTests.swift",
+				"shopper-appUITests/shopper_appUITests.swift",
+				"shopper-appUITests/shopper_appUITestsLaunchTests.swift",
+			);
+			target = E95891952D0B9B9E00111B91 /* shopper-app */;
+		};
+		E90226562E7F1F85007114A5 /* Exceptions for "tests" folder in "shopper-appUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"shopper-appUITests/shopper_appUITests.swift",
+				"shopper-appUITests/shopper_appUITestsLaunchTests.swift",
+			);
+			target = E95891AF2D0B9B9F00111B91 /* shopper-appUITests */;
+		};
+		E902265A2E7F1F88007114A5 /* Exceptions for "tests" folder in "shopper-appTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"shopper-appTests/shopper_appTests.swift",
+			);
+			target = E95891A52D0B9B9F00111B91 /* shopper-appTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		E902264F2E7F1F7E007114A5 /* tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E90226552E7F1F85007114A5 /* Exceptions for "tests" folder in "shopper-app" target */,
+				E902265A2E7F1F88007114A5 /* Exceptions for "tests" folder in "shopper-appTests" target */,
+				E90226562E7F1F85007114A5 /* Exceptions for "tests" folder in "shopper-appUITests" target */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 		E95891982D0B9B9E00111B91 /* shopper-app */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "shopper-app";
-			sourceTree = "<group>";
-		};
-		E95891A92D0B9B9F00111B91 /* shopper-appTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "shopper-appTests";
-			sourceTree = "<group>";
-		};
-		E95891B32D0B9B9F00111B91 /* shopper-appUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "shopper-appUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,9 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				E95891982D0B9B9E00111B91 /* shopper-app */,
-				E95891A92D0B9B9F00111B91 /* shopper-appTests */,
-				E95891B32D0B9B9F00111B91 /* shopper-appUITests */,
 				E95891972D0B9B9E00111B91 /* Products */,
+				E902264F2E7F1F7E007114A5 /* tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +134,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				E902264F2E7F1F7E007114A5 /* tests */,
 				E95891982D0B9B9E00111B91 /* shopper-app */,
 			);
 			name = "shopper-app";
@@ -130,9 +157,6 @@
 			dependencies = (
 				E95891A82D0B9B9F00111B91 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				E95891A92D0B9B9F00111B91 /* shopper-appTests */,
-			);
 			name = "shopper-appTests";
 			packageProductDependencies = (
 			);
@@ -152,9 +176,6 @@
 			);
 			dependencies = (
 				E95891B22D0B9B9F00111B91 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E95891B32D0B9B9F00111B91 /* shopper-appUITests */,
 			);
 			name = "shopper-appUITests";
 			packageProductDependencies = (

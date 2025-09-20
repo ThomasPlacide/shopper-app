@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Thomas Placide",
+    "handle": "@thomasplacide",
+    "spots": [
+      {"name": "Sagrada Família", "latitude": 41.4036, "longitude": 2.1744, "grade": "Must", "comment": "Gaudí's masterpiece—go early to avoid crowds."},
+      {"name": "Park Güell", "latitude": 41.4145, "longitude": 2.1527, "grade": "Must", "comment": "Iconic mosaics and sweeping city views."},
+      {"name": "La Boqueria Market", "latitude": 41.382, "longitude": 2.1719, "grade": "Cool", "comment": "Fresh juices and tapas stalls—busy but worth it."},
+      {"name": "Barceloneta Beach", "latitude": 41.378, "longitude": 2.189, "grade": "Cool", "comment": "Nice for a sunset stroll; avoid peak midday heat."},
+      {"name": "Bunkers del Carmel", "latitude": 41.418, "longitude": 2.1619, "grade": "Must", "comment": "Best panoramic sunset spot in the city."},
+      {"name": "Casa Batlló", "latitude": 41.3917, "longitude": 2.1649, "grade": "Cool", "comment": "Facade is stunning; interior tour if you're a Gaudí fan."},
+      {"name": "El Nacional", "latitude": 41.3912, "longitude": 2.1657, "grade": "Cool", "comment": "Upscale food hall—good for groups with varied tastes."},
+      {"name": "El Xampanyet", "latitude": 41.3835, "longitude": 2.1814, "grade": "Must", "comment": "Classic cava and tapas bar; arrive early to snag a spot."},
+      {"name": "Gothic Quarter (Barri Gòtic)", "latitude": 41.3839, "longitude": 2.1763, "grade": "Cool", "comment": "Wander the narrow streets—great for photos."},
+      {"name": "Montjuïc Magic Fountain", "latitude": 41.3713, "longitude": 2.151, "grade": "Cool", "comment": "Light and music show nights—check schedule."},
+      {"name": "Sant Antoni Market", "latitude": 41.3768, "longitude": 2.1638, "grade": "Cool", "comment": "Less touristy than Boqueria; excellent produce."},
+      {"name": "Can Paixano (La Xampanyeria)", "latitude": 41.3799, "longitude": 2.1827, "grade": "Cool", "comment": "Cheap cava, packed vibe—watch your belongings."},
+      {"name": "Las Ramblas", "latitude": 41.3809, "longitude": 2.173, "grade": "Shit", "comment": "Too touristy and pickpocket-prone—pass through quickly."},
+      {"name": "Camp Nou (Spotify Camp Nou)", "latitude": 41.3809, "longitude": 2.1228, "grade": "Cool", "comment": "Stadium tour for Barça fans; area is otherwise quiet."},
+      {"name": "Palau de la Música Catalana", "latitude": 41.387, "longitude": 2.1754, "grade": "Must", "comment": "Modernist concert hall—take the guided tour."},
+      {"name": "El Born Centre de Cultura", "latitude": 41.3853, "longitude": 2.1835, "grade": "Cool", "comment": "Archaeology meets culture in a beautiful iron market hall."},
+      {"name": "Carretera de les Aigües", "latitude": 41.4126, "longitude": 2.1096, "grade": "Cool", "comment": "Scenic running/walking trail with city views."},
+      {"name": "Tibidabo", "latitude": 41.4227, "longitude": 2.118, "grade": "Cool", "comment": "Vintage amusement park and a church with views."},
+      {"name": "Casa Milà (La Pedrera)", "latitude": 41.3954, "longitude": 2.162, "grade": "Cool", "comment": "Rooftop chimneys are the highlight."},
+      {"name": "Parc de la Ciutadella", "latitude": 41.388, "longitude": 2.1867, "grade": "Cool", "comment": "Relaxing green space; rent a rowboat if you like."}
+    ]
+  },
+  {
+    "name": "Thierry Placide",
+    "handle": "@thierryplacide",
+    "spots": [
+      {"name": "Mercat de la Boqueria", "latitude": 41.382, "longitude": 2.1719, "grade": "Cool", "comment": "Great for a quick bite—go before noon."},
+      {"name": "El Raval Street Art", "latitude": 41.3795, "longitude": 2.1707, "grade": "Cool", "comment": "Murals and gritty vibe—good daytime stroll."},
+      {"name": "Plaça Reial", "latitude": 41.3803, "longitude": 2.1751, "grade": "Cool", "comment": "Lively square; decent tapas and people-watching."},
+      {"name": "Museu Picasso", "latitude": 41.3852, "longitude": 2.18, "grade": "Must", "comment": "Reserve tickets—excellent early works collection."},
+      {"name": "Sants Locals Tapas", "latitude": 41.376, "longitude": 2.14, "grade": "Cool", "comment": "Local neighborhood tapas—friendly prices."},
+      {"name": "La Barceloneta Paella Spot", "latitude": 41.3775, "longitude": 2.194, "grade": "Cool", "comment": "Seafood paella near the beach—touristy but tasty."},
+      {"name": "Arc de Triomf", "latitude": 41.3911, "longitude": 2.1807, "grade": "Cool", "comment": "Nice photo stop on the way to Ciutadella."},
+      {"name": "Montjuïc Castle", "latitude": 41.3636, "longitude": 2.1655, "grade": "Cool", "comment": "Cable car ride is fun; views over the port."},
+      {"name": "Poble Sec Pintxos Street", "latitude": 41.3726, "longitude": 2.1632, "grade": "Must", "comment": "Carrer de Blai for pintxos hopping."},
+      {"name": "Hospital de Sant Pau", "latitude": 41.4122, "longitude": 2.174, "grade": "Must", "comment": "Stunning modernist complex—less crowded than Sagrada."},
+      {"name": "Eixample Grid Walk", "latitude": 41.392, "longitude": 2.16, "grade": "Cool", "comment": "Iconic chamfered corners and cafes everywhere."},
+      {"name": "Port Vell Boardwalk", "latitude": 41.3785, "longitude": 2.1858, "grade": "Cool", "comment": "Evening walk with sea breeze and street performers."},
+      {"name": "Columbus Monument", "latitude": 41.3757, "longitude": 2.1771, "grade": "Shit", "comment": "Skip the elevator up—views aren't worth the wait."},
+      {"name": "Gràcia Plazas Crawl", "latitude": 41.403, "longitude": 2.1565, "grade": "Must", "comment": "Plaça del Sol and friends—cozy bars and vibes."},
+      {"name": "Passeig de Gràcia Shopping", "latitude": 41.3934, "longitude": 2.1633, "grade": "Cool", "comment": "High-end shopping and architecture together."},
+      {"name": "Mercat de Sant Antoni Sunday Books", "latitude": 41.3771, "longitude": 2.1635, "grade": "Cool", "comment": "Weekend book market around the perimeter."},
+      {"name": "W Hotel Lookout", "latitude": 41.3686, "longitude": 2.1897, "grade": "Cool", "comment": "Cocktail with a view—pricey but scenic."},
+      {"name": "Carmel Bunkers Alternate Path", "latitude": 41.4185, "longitude": 2.1605, "grade": "Cool", "comment": "Less crowded ascent via the park trails."},
+      {"name": "Diagonal Mar Park", "latitude": 41.4107, "longitude": 2.2142, "grade": "Cool", "comment": "Modern park with water features—family friendly."}
+    ]
+  },
+  {
+    "name": "Julien Placide",
+    "handle": "@julienplacide",
+    "spots": [
+      {"name": "Sant Pau Recinte Modernista", "latitude": 41.4122, "longitude": 2.174, "grade": "Must", "comment": "Architectural gem—combine with Sagrada visit."},
+      {"name": "Casa Vicens", "latitude": 41.403, "longitude": 2.1527, "grade": "Cool", "comment": "Early Gaudí house—quieter than other sites."},
+      {"name": "Parc del Laberint d'Horta", "latitude": 41.441, "longitude": 2.1573, "grade": "Cool", "comment": "Neoclassical maze—great for a calm morning."},
+      {"name": "Mercat de Sant Andreu", "latitude": 41.4332, "longitude": 2.1888, "grade": "Cool", "comment": "Neighborhood market—authentic local feel."},
+      {"name": "Born Tapas Alley", "latitude": 41.3858, "longitude": 2.1822, "grade": "Must", "comment": "Tapas crawl around Passeig del Born."},
+      {"name": "Palau Güell", "latitude": 41.3783, "longitude": 2.1741, "grade": "Cool", "comment": "Gaudí townhouse with ornate interiors."},
+      {"name": "MNAC - Museu Nacional d'Art de Catalunya", "latitude": 41.3689, "longitude": 2.153, "grade": "Cool", "comment": "Romanesque collection and city views from steps."},
+      {"name": "Parc de Montjuïc Cactus Garden", "latitude": 41.3665, "longitude": 2.1616, "grade": "Cool", "comment": "Jardins de Mossèn Costa i Llobera—unique plants and vistas."},
+      {"name": "Mercat de la Concepció", "latitude": 41.3956, "longitude": 2.1685, "grade": "Cool", "comment": "Flower market early morning is lovely."},
+      {"name": "Torre Glòries View", "latitude": 41.4036, "longitude": 2.191, "grade": "Cool", "comment": "Observation deck with a cool data art installation."},
+      {"name": "Razzmatazz Club", "latitude": 41.4003, "longitude": 2.191, "grade": "Cool", "comment": "Big multi-room club—best on weekends."},
+      {"name": "Plaça de Sant Felip Neri", "latitude": 41.3837, "longitude": 2.1752, "grade": "Must", "comment": "Quiet historic square; poignant history."},
+      {"name": "Parc del Poblenou Beach Stretch", "latitude": 41.4034, "longitude": 2.2147, "grade": "Cool", "comment": "Less crowded than Barceloneta; good for runs."},
+      {"name": "Maremagnum Sunset Spot", "latitude": 41.3753, "longitude": 2.184, "grade": "Cool", "comment": "Harbor views; grab gelato nearby."},
+      {"name": "Tourist Trap Paella Row", "latitude": 41.3778, "longitude": 2.193, "grade": "Shit", "comment": "Avoid set menus here—seek local recs instead."},
+      {"name": "Jardins del Turó del Putxet", "latitude": 41.4098, "longitude": 2.1459, "grade": "Cool", "comment": "Small hill park, peaceful at golden hour."},
+      {"name": "Arenas de Barcelona Rooftop", "latitude": 41.3765, "longitude": 2.1497, "grade": "Cool", "comment": "Circular mall rooftop walk with views."},
+      {"name": "Carrer de Petritxol Chocolaterias", "latitude": 41.3829, "longitude": 2.1715, "grade": "Must", "comment": "Hot chocolate and churros lane—sweet stop."},
+      {"name": "Passeig Marítim Sunrise Run", "latitude": 41.389, "longitude": 2.204, "grade": "Must", "comment": "Quiet early morning seaside path—perfect run."}
+    ]
+  }
+]
