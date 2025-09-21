@@ -10,7 +10,7 @@ import Foundation
 struct Following: Identifiable, Codable {
     var id: UUID
     var name: String
-    var handle: String // IG handle
+    var handle: String // IG handle or apple sign-in
     var spots: [Spot]
 
     struct Spot: Identifiable, Codable {

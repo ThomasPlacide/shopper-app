@@ -12,6 +12,7 @@ import SwiftUI
 struct sideMenu: View {
     var followings: [Following]
     @State private var searchText = ""
+    @State private var selectedFollowings: Set<UUID> = []
 
     var filteredFollowings: [Following] {
         if searchText.isEmpty {
@@ -20,15 +21,23 @@ struct sideMenu: View {
             return followings.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
     }
-
+    
     var body: some View {
         VStack(spacing: 0) {
             SearchBar(text: $searchText)
                 .padding(.vertical, 8)
-            List(filteredFollowings) { following in
+                .autocorrectionDisabled(true)
+            List(filteredFollowings, id: \.id, selection: $selectedFollowings) { following in
                 Text(following.name)
             }
+            
+            Button("Clear selection") {
+                nil
+                }
+            }
+        
         }
         .navigationTitle("Followings")
+        .environment(\.editMode, .constant(.active))
     }
 }
