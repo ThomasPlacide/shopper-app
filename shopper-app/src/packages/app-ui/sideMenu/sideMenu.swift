@@ -31,10 +31,9 @@ struct sideMenu: View {
                 Text(following.name)
             }
             
-            Button("Clear selection") {
-                nil
-                }
-            }
+            //Button("Clear selection") {
+            //    nil
+            //    }
         
         }
         .navigationTitle("Followings")

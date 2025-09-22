@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Following: Identifiable, Codable {
     var id: UUID
     var name: String
     var handle: String // IG handle or apple sign-in
-    var spots: [Spot]
+    var spots: CLLocationCoordinate2D
 
     struct Spot: Identifiable, Codable {
         enum Grade: String, Codable, CaseIterable {
@@ -63,8 +64,12 @@ struct Following: Identifiable, Codable {
     private enum CodingKeys: String, CodingKey {
         case id, name, handle, spots
     }
+    
+    private enum SpotsCodingKeys: String, CodingKey {
+        case latitude, longitude
+    }
 
-    init(id: UUID = UUID(), name: String, handle: String, spots: [Spot]) {
+    init(id: UUID = UUID(), name: String, handle: String, spots: CLLocationCoordinate2D) {
         self.id = id
         self.name = name
         self.handle = handle
@@ -76,7 +81,10 @@ struct Following: Identifiable, Codable {
         self.id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
         self.name = try container.decode(String.self, forKey: .name)
         self.handle = try container.decode(String.self, forKey: .handle)
-        self.spots = try container.decode([Spot].self, forKey: .spots)
+        let spotsContainer = try container.nestedContainer(keyedBy: SpotsCodingKeys.self, forKey: .spots)
+        let latitude = try spotsContainer.decode(Double.self, forKey: .latitude)
+        let longitude = try spotsContainer.decode(Double.self, forKey: .longitude)
+        self.spots = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -84,7 +92,9 @@ struct Following: Identifiable, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(handle, forKey: .handle)
-        try container.encode(spots, forKey: .spots)
+        var spotsContainer = container.nestedContainer(keyedBy: SpotsCodingKeys.self, forKey: .spots)
+        try spotsContainer.encode(spots.latitude, forKey: .latitude)
+        try spotsContainer.encode(spots.longitude, forKey: .longitude)
     }
 }
 

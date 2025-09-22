@@ -9,9 +9,9 @@ import SwiftUI
 import MapKit
 
 
-
 struct ContentView: View {
     @State private var sideMenuButton: Bool = false
+    @State private var position: MapCameraPosition = .automatic
     
     let backgroundGradient = LinearGradient(
         colors: [Color.red, Color.blue],
@@ -21,8 +21,15 @@ struct ContentView: View {
         
         GeometryReader { geometry in
             ZStack {
-                Map().mapStyle(.standard(elevation: .realistic))
-                
+                Map(position: $position){
+                    ForEach(followingsTestData.indices, id: \.self) { index in
+                        let following = followingsTestData[index]
+                        Marker("Following", coordinate: following.spots)
+                    }
+
+                }
+                .mapStyle(.standard(elevation: .realistic))
+
                 let sideMenuSize = 2*geometry.size.width / 3
                 
                 Button(action: {                                    withAnimation {
@@ -58,11 +65,7 @@ struct ContentView: View {
         }
         
     }
-        
-        
-        
-    }
-
+}
 
 #Preview {
     ContentView()
