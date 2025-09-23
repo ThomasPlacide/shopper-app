@@ -17,25 +17,28 @@ struct ContentView: View {
         colors: [Color.red, Color.blue],
         startPoint: .top, endPoint: .bottom)
     
+    
     var body: some View {
         
         GeometryReader { geometry in
+            let sideMenuSize = 2*geometry.size.width / 3
             ZStack {
-                Map(position: $position){
-                    ForEach(followingsTestData.indices, id: \.self) { index in
-                        let following = followingsTestData[index]
-                        Marker("Following", coordinate: following.spots)
+                // If following selected, display selection
+                Map(position: $position) {
+                    ForEach(followingsTestData) { following in
+                        ForEach(following.spots) { spot in
+                            Marker(spot.name, coordinate: spot.coordinates)
+                            // Display only 50 or 100 locations to not overload app if a lot of spots are to be displayed (Smart filtering to randomize spots + refinement when zooming
+                        }
                     }
-
                 }
                 .mapStyle(.standard(elevation: .realistic))
-
-                let sideMenuSize = 2*geometry.size.width / 3
                 
-                Button(action: {                                    withAnimation {
+                Button(action: {
+                    withAnimation {
                     sideMenuButton.toggle()
-                }
-                }) {
+                    }
+                    }) {
                     Image(systemName: "list.dash")
                 }
                 .font(.title)
