@@ -30,11 +30,7 @@ struct sideMenu: View {
             List(filteredFollowings, id: \.id, selection: $selectedFollowings) { following in
                 Text(following.name)
             }
-            
-            //Button("Clear selection") {
-            //    nil
-            //    }
-        
+
         }
         .navigationTitle("Followings")
         .environment(\.editMode, .constant(.active))
